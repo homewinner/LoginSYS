@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val tfail2 = Toast.makeText(applicationContext,"Password in both fields is different.",Toast.LENGTH_LONG)
         val tfail3 = Toast.makeText(applicationContext,"Please fill the empty fields.",Toast.LENGTH_LONG)
         val tsuccess = Toast.makeText(applicationContext,"Register successful.",Toast.LENGTH_LONG)
+        val tclear = Toast.makeText(applicationContext,"All fields are empty.",Toast.LENGTH_LONG)
 
         bt1.setOnClickListener(){
             if (this.user.text.toString() == "" || this.pw.text.toString() == "" || this.cf.text.toString() == ""){
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             user.setText(null)
             pw.setText(null)
             cf.setText(null)
+            tclear.show()
         }
     }
 }
